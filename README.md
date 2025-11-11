@@ -21,12 +21,57 @@ class Caja<T> {
 
 Esto evita escribir varias clases como `CajaEntero`, `CajaString`, `CajaEstudiante`.
 
+
 ---
 
+## 🧮 Ejemplo 1: Caja con `Integer`
+
+```java
+public class MainEntero {
+    public static void main(String[] args) {
+        // Caja que guarda un número entero
+        Caja<Integer> cajaEntero = new Caja<>();
+        cajaEntero.setValor(100);
+
+        System.out.println("El valor en la caja es: " + cajaEntero.getValor());
+    }
+}
+```
+
+📤 **Salida:**
+
+```
+El valor en la caja es: 100
+```
+
+---
+
+## 🧮 Ejemplo 2: Caja con `String`
+
+```java
+public class MainString {
+    public static void main(String[] args) {
+        // Caja que guarda una cadena de texto
+        Caja<String> cajaTexto = new Caja<>();
+        cajaTexto.setValor("Hola Mundo");
+
+        System.out.println("Mensaje guardado: " + cajaTexto.getValor());
+    }
+}
+```
+
+📤 **Salida:**
+
+```
+Mensaje guardado: Hola Mundo
+```
+
+---
+
+## 🧮 Ejemplo 3: Caja con una clase personalizada (`Estudiante`)
+
+Primero definimos la clase `Estudiante`:
 ## 🧱 Clase auxiliar: `Estudiante`
-
-La usaremos en todos los ejemplos.
-
 ```java
 public class Estudiante implements Comparable<Estudiante> {
     private String nombre;
@@ -55,6 +100,26 @@ public class Estudiante implements Comparable<Estudiante> {
     }
 }
 ```
+
+📤 **Salida:**
+
+```
+Contenido de la caja: Ana (Promedio: 4.6)
+Promedio del estudiante: 4.6
+```
+
+---
+
+## 📘 Conclusión
+
+| Tipo de Caja       | Tipo de dato guardado  | Ejemplo de uso                             |
+| ------------------ | ---------------------- | ------------------------------------------ |
+| `Caja<Integer>`    | Números enteros        | Guardar edad, cantidad, ID                 |
+| `Caja<String>`     | Texto                  | Guardar nombres, mensajes                  |
+| `Caja<Estudiante>` | Objetos personalizados | Guardar y acceder a un estudiante completo |
+
+
+
 
 ---
 
